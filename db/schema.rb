@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2023_03_17_214410) do
   create_table "shelters", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.integer "phone"
+    t.string "phone"
     t.string "email"
   end
 
