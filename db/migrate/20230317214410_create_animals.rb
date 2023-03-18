@@ -7,6 +7,8 @@ class CreateAnimals < ActiveRecord::Migration[6.1]
       t.string :sex
       t.integer :age
       t.integer :shelter_id
+      t.string :image
+      t.timestamps
     end
   end
 end

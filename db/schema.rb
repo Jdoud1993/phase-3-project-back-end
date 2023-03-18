@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 2023_03_17_214410) do
     t.string "sex"
     t.integer "age"
     t.integer "shelter_id"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "shelters", force: :cascade do |t|
@@ -26,6 +29,9 @@ ActiveRecord::Schema.define(version: 2023_03_17_214410) do
     t.string "address"
     t.string "phone"
     t.string "email"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
