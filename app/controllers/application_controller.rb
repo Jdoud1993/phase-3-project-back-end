@@ -6,4 +6,9 @@ class ApplicationController < Sinatra::Base
     animals.to_json 
   end
 
+  get '/shelters' do 
+    shelters = Shelter.all 
+    shelters.to_json 
+  end
+
 end
