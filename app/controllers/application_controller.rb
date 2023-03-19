@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
   
   get '/animals' do 
     animals = Animal.all 
-    animals.to_json 
+    animals.to_json(include: :shelter) 
   end
 
   get '/shelters' do 
