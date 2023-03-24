@@ -39,4 +39,15 @@ class ApplicationController < Sinatra::Base
     shelters.to_json 
   end
 
+  post '/shelters' do
+    shelter = Shelter.create(
+      name: params[:name],
+      address: params[:address],
+      email: params[:email],
+      phone: params[:phone],
+      image: params[:image],
+    )
+    shelter.to_json
+  end
+
 end
