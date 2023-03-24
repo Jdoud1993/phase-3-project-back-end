@@ -32,6 +32,20 @@ class ApplicationController < Sinatra::Base
     animal.to_json
   end
 
+  patch '/animals/:id' do
+    animal = Animal.find(params[:id])
+    animal.update(
+      name: params[:name],
+      species: params[:species],
+      breed: params[:breed],
+      sex: params[:sex],
+      age: params[:age],
+      image: params[:image],
+      shelter_id: params[:shelter_id]
+    )
+    animal.to_json
+  end
+
 
   # Shelter Controllers READ/CREATE
   get '/shelters' do 
