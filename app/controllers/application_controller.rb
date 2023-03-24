@@ -19,6 +19,19 @@ class ApplicationController < Sinatra::Base
     animal.to_json
   end
 
+  post '/animals' do
+    animal = Animal.create(
+      name: params[:name],
+      species: params[:species],
+      breed: params[:breed],
+      sex: params[:sex],
+      age: params[:age],
+      image: params[:image],
+      shelter_id: params[:shelter_id]
+    )
+    animal.to_json
+  end
+
 
   # Shelter Controllers READ/CREATE
   get '/shelters' do 
