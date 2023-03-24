@@ -6,6 +6,13 @@ class ApplicationController < Sinatra::Base
     animals.to_json(include: :shelter) 
   end
 
+  get '/animals/:id' do
+    animal = Animal.find(params[:id])
+    animal.to_json(include: :shelter)
+  end
+
+  
+
   get '/shelters' do 
     shelters = Shelter.all 
     shelters.to_json 
