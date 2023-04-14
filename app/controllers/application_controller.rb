@@ -29,7 +29,7 @@ class ApplicationController < Sinatra::Base
       image: params[:image],
       shelter_id: params[:shelter_id]
     )
-    animal.to_json
+    animal.to_json(include: :shelter)
   end
 
   patch '/animals/:id' do
@@ -43,7 +43,7 @@ class ApplicationController < Sinatra::Base
       image: params[:image],
       shelter_id: params[:shelter_id]
     )
-    animal.to_json
+    animal.to_json(include: :shelter)
   end
 
 
